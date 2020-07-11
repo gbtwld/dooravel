@@ -18,79 +18,106 @@
 
     </script>
     <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 1.5px darkslateblue solid;
+            padding: 20px;
+            margin: 0;
+        }
+
+        ol {
+            border-right: 1.5px darkslateblue solid;
+            width: 100px;
+            margin: 0;
+            padding-top: 15px;
+        }
+
         a {
             color: forestgreen;
             text-decoration: none;
         }
 
-        h1 {
-            font-size: 45px;
-            text-align: center;
+        .curpage {
+            color: firebrick;
+            text-decoration: none;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        #contents {
+            padding-left: 16px;
         }
 
     </style>
 
 </head>
-<a href="index.html">
-    <h1>우당탕탕 미국 여행기</h1>
-</a>
-<body1>
-    <ol>
-        <a href="seattle.html" style="color: firebrick; text-decoration: underline;">
-            <li>시애틀</li>
-        </a>
-        <a href="portland.html">
-            <li>포틀랜드</li>
-        </a>
-        <a href="sanfrancisco.html">
-            <li>샌프란시스코</li>
-        </a>
-        <a href="vegas.html">
-            <li>라스베가스</li>
-        </a>
-        <a href="la.html">
-            <li>엘에이</li>
-        </a>
-    </ol>
-</body1>
-<body2 style="text-align: center">
-    <h2>시애틀</h2>
-    <p>
-        <img src="assets/ICN.jpg" width="672"><br><br>
-        인천공항에 도착했다. 따로따로 출발해서 약간 외로웠다. 그리고 비행기를 타는게 제일 싫었다. <br>
-        희원이와 택원이를 잠깐 만나고 게이트 앞에서 영주와 통화하다가 비행기로 들어갔다.<br>
-        그리곤 10시간 넘게 비행기 가운데 자리에 낑겨서 밥주면 밥먹고 물주면 물마시면서 갔다. <br><br>
-    </p>
-    <p>
-        <img src="assets/Seattle_Arrive.png" width="312" height="416"> <br><br>
-        시애틀 공항에 도착하고 창민이를 만났다. 긴 비행 끝에 보는 친구의 모습은 너무나 사랑스러웠다.<br>
-    </p>
 
-</body2>
-<body3>
-    <p>
-        <!-- 라이브리 시티 설치 코드 -->
-        <div id="lv-container" data-id="city" data-uid="MTAyMC81MDk2OS8yNzQ1MQ==">
-            <script type="text/javascript">
-                (function(d, s) {
-                    var j, e = d.getElementsByTagName(s)[0];
+<body>
+    <a href="index.html">
+        <h1>우당탕탕 미국 여행기</h1>
+    </a>
+    <div id="grid">
+        <ol>
+            <a href="seattle.html" class="curpage">
+                <li>시애틀</li>
+            </a>
+            <a href="portland.html">
+                <li>포틀랜드</li>
+            </a>
+            <a href="sanfrancisco.html">
+                <li>샌프란시스코</li>
+            </a>
+            <a href="vegas.html">
+                <li>라스베가스</li>
+            </a>
+            <a href="la.html">
+                <li>엘에이</li>
+            </a>
+        </ol>
+        <div id="contents">
+            <h2>시애틀</h2>
+            <p>
+                <img src="assets/ICN.jpg" width="672"><br><br>
+                인천공항에 도착했다. 따로따로 출발해서 약간 외로웠다. 그리고 비행기를 타는게 제일 싫었다. <br>
+                희원이와 택원이를 잠깐 만나고 게이트 앞에서 영주와 통화하다가 비행기로 들어갔다.<br>
+                그리곤 10시간 넘게 비행기 가운데 자리에 낑겨서 밥주면 밥먹고 물주면 물마시면서 갔다. <br><br>
+            </p>
+            <p>
+                <img src="assets/Seattle_Arrive.png" width="312" height="416"> <br><br>
+                시애틀 공항에 도착하고 창민이를 만났다. 긴 비행 끝에 보는 친구의 모습은 너무나 사랑스러웠다.<br>
+            </p>
+            <p>
+                <!-- 라이브리 시티 설치 코드 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC81MDk2OS8yNzQ1MQ==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
 
-                    if (typeof LivereTower === 'function') {
-                        return;
-                    }
+                            if (typeof LivereTower === 'function') {
+                                return;
+                            }
 
-                    j = d.createElement(s);
-                    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                    j.async = true;
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
 
-                    e.parentNode.insertBefore(j, e);
-                })(document, 'script');
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
 
-            </script>
-            <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+                    </script>
+                    <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+                </div>
+                <!-- 시티 설치 코드 끝 -->
+            </p> <!-- liveRe install -->
         </div>
-        <!-- 시티 설치 코드 끝 -->
-    </p>
-</body3>
+    </div>
+</body>
 
 </html>

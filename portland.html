@@ -18,71 +18,100 @@
 
     </script>
     <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 1.5px darkslateblue solid;
+            padding: 20px;
+            margin: 0;
+        }
+
+        ol {
+            border-right: 1.5px darkslateblue solid;
+            width: 100px;
+            margin: 0;
+            padding-top: 15px;
+        }
+
         a {
             color: forestgreen;
             text-decoration: none;
         }
 
-        h1 {
-            font-size: 45px;
-            text-align: center;
+        .curpage {
+            color: firebrick;
+            text-decoration: none;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        #contents {
+            padding-left: 16px;
         }
 
     </style>
 
 </head>
-<a href="index.html">
-    <h1>우당탕탕 미국 여행기</h1>
-</a>
-<body1>
-    <ol>
-        <a href="seattle.html">
-            <li>시애틀</li>
-        </a>
-        <a href="portland.html" style="color: firebrick; text-decoration: underline;">
-            <li>포틀랜드</li>
-        </a>
-        <a href="sanfrancisco.html">
-            <li>샌프란시스코</li>
-        </a>
-        <a href="vegas.html">
-            <li>라스베가스</li>
-        </a>
-        <a href="la.html">
-            <li>엘에이</li>
-        </a>
-    </ol>
-</body1>
-<body2 style="text-align: center">
-    <p>
-        <img src="assets/always_with_you.jpeg"> <br>
-        포틀랜드에선 과연 무슨일이!
-    </p>
-</body2>
-<body3>
-    <p>
-        <!-- 라이브리 시티 설치 코드 -->
-        <div id="lv-container" data-id="city" data-uid="MTAyMC81MDk2OS8yNzQ1MQ==">
-            <script type="text/javascript">
-                (function(d, s) {
-                    var j, e = d.getElementsByTagName(s)[0];
 
-                    if (typeof LivereTower === 'function') {
-                        return;
-                    }
+<body>
+    <a href="index.html">
+        <h1>우당탕탕 미국 여행기</h1>
+    </a>
+    <div id="grid">
+        <ol>
+            <a href="seattle.html">
+                <li>시애틀</li>
+            </a>
+            <a href="portland.html" class="curpage">
+                <li>포틀랜드</li>
+            </a>
+            <a href="sanfrancisco.html">
+                <li>샌프란시스코</li>
+            </a>
+            <a href="vegas.html">
+                <li>라스베가스</li>
+            </a>
+            <a href="la.html">
+                <li>엘에이</li>
+            </a>
+        </ol>
+        <div id="contents">
+            <h2>포틀랜드</h2>
+            <p>
+                <img src="assets/always_with_you.jpeg"> <br>
+                포틀랜드에선 과연 무슨일이!
+            </p>
+            <p>
+                <!-- 라이브리 시티 설치 코드 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC81MDk2OS8yNzQ1MQ==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
 
-                    j = d.createElement(s);
-                    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                    j.async = true;
+                            if (typeof LivereTower === 'function') {
+                                return;
+                            }
 
-                    e.parentNode.insertBefore(j, e);
-                })(document, 'script');
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
 
-            </script>
-            <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+
+                    </script>
+                    <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+                </div>
+                <!-- 시티 설치 코드 끝 -->
+            </p> <!-- liveRe install -->
         </div>
-        <!-- 시티 설치 코드 끝 -->
-    </p>
-</body3>
+    </div>
+</body>
 
 </html>
