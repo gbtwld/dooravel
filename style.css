@@ -35,9 +35,11 @@ a {
     padding-left: 16px;
 }
 
-#lv-container {
-    padding: 150px;
-    padding-top: 50px;
+@media(min-width: 801px) {
+    #lv-container {
+        padding: 150px;
+        padding-top: 50px;
+    }
 }
 
 @media(max-width: 800px) {
@@ -48,4 +50,12 @@ a {
     ol {
         border-right: none;
     }
+
+    #contents {
+        padding-right: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
 }
