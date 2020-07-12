@@ -21,6 +21,12 @@ a {
     text-decoration: none;
 }
 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .curpage {
     color: firebrick;
     text-decoration: none;
@@ -33,6 +39,7 @@ a {
 
 #contents {
     padding-left: 16px;
+    padding-right: 16px;
 }
 
 @media(min-width: 801px) {
@@ -50,10 +57,6 @@ a {
     ol {
         border-right: none;
     }
-
-    #contents {
-        padding-right: 16px;
-    }
     
     #lv-container {
         margin-left: 5px;
@@ -61,7 +64,3 @@ a {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
