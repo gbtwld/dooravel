@@ -70,7 +70,7 @@ img {
         position: sticky;
         top: 0;
         border-bottom-style: solid;
-        border-bottom-width: medium;
+        border-bottom-width: 1.5px;
         background-color: aliceblue;
         padding-top: 8px;
         padding-bottom: 8px;
