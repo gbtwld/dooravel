@@ -47,6 +47,10 @@ img {
         padding: 150px;
         padding-top: 50px;
     }
+    
+    img {
+        width: 50%;
+    }
 }
 
 @media(max-width: 800px) {
