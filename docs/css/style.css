@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @font-face {
-  font-family: "NanumGothic";
-  src: url("fonts.googleapis.com/earlyaccess/nanumgothic.css");
-  font-display: swap;
+  font-family: "Nanum Gothic", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+  display: swap;
 }
 
 body {
