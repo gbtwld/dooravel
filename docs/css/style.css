@@ -1,7 +1,6 @@
 @font-face {
   font-family: "NanumGothic";
-  src: local("NanumGothic"),
-    url("fonts.googleapis.com/earlyaccess/nanumgothic.css");
+  src: url("fonts.googleapis.com/earlyaccess/nanumgothic.css");
   font-display: swap;
 }
 
