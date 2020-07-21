@@ -120,17 +120,22 @@ input[id="menuicon"]:checked + label + div {
   list-style: none;
 }
 .sitemap-ul > li {
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
   vertical-align: top;
   width: 20%;
   list-style: none;
 }
 
-.sitemap-ul * li {
+.sitemap-ul > li > ul > li {
   font-size: 20px;
   list-style: none;
 }
+
+/*.sitemap-ul * li {
+  font-size: 20px;
+  list-style: none;
+}*/
 
 body {
   margin: 0;
@@ -184,6 +189,12 @@ img {
   h2 {
     padding-bottom: 12px;
   }
+
+  .menu-ul > li {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 @media (max-width: 700px) {
@@ -196,6 +207,15 @@ img {
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  input[id="menuicon"] + label {
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 25px;
+    cursor: pointer;
+  }
+
   .DivImg {
     height: 300px;
     width: 612px;
@@ -209,9 +229,12 @@ img {
     display: inline-block;
     vertical-align: top;
     width: 20%;
+    list-style: none;
   }
-  .sitemap-ul * li {
+
+  .sitemap-ul > li > ul > li {
     font-size: 16px;
+    list-style: none;
   }
 
   input[id="menuicon"]:checked + label + div {
