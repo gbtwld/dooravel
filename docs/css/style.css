@@ -180,6 +180,10 @@ img {
     width: 50%;
     height: 50%;
   }
+
+  h2 {
+    padding-bottom: 12px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -212,5 +216,13 @@ img {
 
   input[id="menuicon"]:checked + label + div {
     height: 150px;
+  }
+
+  .contents {
+    padding-top: 80px;
+  }
+
+  h2 {
+    padding-bottom: 10px;
   }
 }
