@@ -208,6 +208,10 @@ img {
     margin-right: 5px;
   }
 
+  .header-list > li:nth-child(1) {
+    margin-right: 36px;
+  }
+
   input[id="menuicon"] + label {
     display: block;
     position: relative;
