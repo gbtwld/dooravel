@@ -27,40 +27,93 @@
   </head>
 
   <body>
-    <a href="index.html">
-      <h1>우당탕탕 미국 여행기</h1>
-    </a>
-    <div id="grid">
-      <ol>
-        <a href="seattle.html">
-          <li>시애틀</li>
+    <header>
+      <ul class="header-list">
+        <li>
+          <div><a href="index.html">우당탕탕 미국 여행기</a></div>
+        </li>
+        <li>
+          <div>
+            <ul class="menu-ul">
+              <li><a href="seattle.html">시애틀</a></li>
+              <li><a href="portland.html">포틀랜드</a></li>
+              <li><a href="sanfrancisco.html">샌프란시스코</a></li>
+              <li><a href="vegas.html">라스베가스</a></li>
+              <li><a href="la.html">LA</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" id="menuicon" />
+            <label for="menuicon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <div class="sidebar">
+              <ul class="sitemap-ul">
+                <li>
+                  <a href="seattle.html">시애틀</a>
+                  <ul>
+                    <li><a href="seattle.html">출발전</a></li>
+                    <li><a href="seattle.html">1일차</a></li>
+                    <li><a href="seattle.html">2일차</a></li>
+                    <li><a href="seattle.html">3일차</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="portland.html">포틀랜드</a>
+                  <ul>
+                    <li><a href="portland.html">1일차</a></li>
+                    <li><a href="portland.html">2일차</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="sanfrancisco.html">샌프란시스코</a>
+                  <ul>
+                    <li><a href="sanfrancisco.html">1일차</a></li>
+                    <li><a href="sanfrancisco.html">2일차</a></li>
+                    <li><a href="sanfrancisco.html">3일차</a></li>
+                    <li><a href="sanfrancisco.html">4일차</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="vegas.html">라스베가스</a>
+                  <ul>
+                    <li><a href="vegas.html">프롤로그</a></li>
+                    <li><a href="vegas.html">1일차</a></li>
+                    <li><a href="vegas.html">2일차</a></li>
+                    <li><a href="vegas.html">3일차</a></li>
+                    <li><a href="vegas.html">4일차</a></li>
+                    <li><a href="vegas.html">5일차</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="la.html">LA</a>
+                  <ul>
+                    <li><a href="la.html">1일차</a></li>
+                    <li><a href="la.html">2일차</a></li>
+                    <li><a href="la.html">3일차</a></li>
+                    <li><a href="la.html">4일차</a></li>
+                    <li><a href="la.html">5일차</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <div class="contents">
+      <p>
+        <img src="assets/always_with_you.jpeg" /> <br />
+        네명의 친구들이 떠난 미국 여행!!<br />
+        과연 그들에겐 무슨 일이 일어났을까!!<br />
+        <a href="seattle.html" target="_self" style="color: rgb(192, 120, 92);"
+          >궁금하면 클릭!
         </a>
-        <a href="portland.html" onclick="alert('아직 준비중입니다!')">
-          <li>포틀랜드</li>
-        </a>
-        <a href="sanfrancisco.html">
-          <li>샌프란시스코</li>
-        </a>
-        <a href="vegas.html">
-          <li>라스베가스</li>
-        </a>
-        <a href="la.html">
-          <li>LA</li>
-        </a>
-      </ol>
-      <div id="contents">
-        <p>
-          <img src="assets/always_with_you.jpeg" /> <br />
-          네명의 친구들이 떠난 미국 여행!!<br />
-          과연 그들에겐 무슨 일이 일어났을까!!<br />
-          <a
-            href="seattle.html"
-            target="_self"
-            style="color: rgb(192, 120, 92);"
-            >궁금하면 클릭!
-          </a>
-        </p>
-      </div>
+      </p>
     </div>
   </body>
 </html>

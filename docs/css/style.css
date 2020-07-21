@@ -1,5 +1,137 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #fff;
+}
+header {
+  width: 100%;
+  background: #f0f0f0;
+  position: fixed;
+  z-index: 10;
+}
+.header-list {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0;
+  padding: 15px 0;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.header-list > li {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-list > li:nth-child(1) {
+  font-size: 21px;
+  width: 200px;
+}
+.header-list > li:nth-child(2) {
+  width: calc(100% - 300px);
+}
+.header-list > li:nth-child(3) {
+  width: 50px;
+}
+.header-list > li > div {
+  width: auto;
+}
+
+.menu-ul {
+  font-size: 0;
+}
+.menu-ul > li {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu-ul > li > a {
+  display: block;
+  width: auto;
+  padding: 15px;
+}
+
+input[id="menuicon"] {
+  display: none;
+}
+input[id="menuicon"] + label {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+input[id="menuicon"] + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 30px;
+  background: #666;
+  transition: all 0.35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+  top: 10%;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+} /* 비슷하게 사용할 수 있는 style top:calc(50% - 2.5px); margin-top:-2.5px;*/
+input[id="menuicon"] + label span:nth-child(3) {
+  bottom: 10%;
+}
+input[id="menuicon"]:checked + label {
+  z-index: 2;
+}
+input[id="menuicon"]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+div[class="sidebar"] {
+  width: 100%;
+  height: 0px;
+  background: rgba(151, 203, 224, 0.8);
+  position: fixed;
+  top: 76px;
+  left: 0;
+  z-index: 1;
+  transition: all 0.35s;
+  overflow: hidden;
+}
+input[id="menuicon"]:checked + label + div {
+  height: 185px;
+}
+
+.sitemap-ul {
+  font-size: 0;
+  width: 100%;
+  margin: 15px auto;
+  text-align: center;
+  list-style: none;
+}
+.sitemap-ul > li {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  list-style: none;
+}
+
+.sitemap-ul * li {
+  font-size: 20px;
+  list-style: none;
+}
+
 body {
   margin: 0;
   font-family: "Nanum Gothic", sans-serif;
@@ -10,13 +142,6 @@ h1 {
   border-bottom: 1.5px darkslateblue solid;
   padding: 20px;
   margin: 0;
-}
-
-ol {
-  border-right: 1.5px darkslateblue solid;
-  width: 100px;
-  margin: 0;
-  padding-top: 15px;
 }
 
 a {
@@ -34,21 +159,18 @@ img {
   text-decoration: none;
 }
 
-#grid {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-}
-
-#contents {
-  padding-left: 16px;
-  padding-right: 16px;
-}
 .DivImg {
   height: 689px;
   width: 919px;
 }
 
-@media (min-width: 801px) {
+.contents {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 90px;
+}
+
+@media (min-width: 701px) {
   #lv-container {
     padding: 150px;
     padding-top: 50px;
@@ -60,33 +182,10 @@ img {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   #grid {
     display: block;
     grid-template-rows: 1fr 9fr;
-  }
-
-  ol {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    text-align: center;
-    width: inherit;
-    height: inherit;
-    list-style-type: none;
-    border-right: none;
-    position: sticky;
-    top: 0;
-    border-bottom-style: solid;
-    border-bottom-width: 1.5px;
-    background-color: aliceblue;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  li {
-    display: inline;
-    margin-left: 5px;
-    margin-right: 5px;
   }
 
   #lv-container {
@@ -96,5 +195,22 @@ img {
   .DivImg {
     height: 300px;
     width: 612px;
+  }
+
+  .menu-ul {
+    display: none;
+  }
+  .sitemap-ul > li {
+    font-size: 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+  }
+  .sitemap-ul * li {
+    font-size: 16px;
+  }
+
+  input[id="menuicon"]:checked + label + div {
+    height: 150px;
   }
 }
