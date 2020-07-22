@@ -159,7 +159,7 @@ img {
   height: auto;
 }
 
-.curpage {
+#curpage {
   color: firebrick;
   text-decoration: none;
 }
@@ -167,6 +167,18 @@ img {
 .curcity {
   color: olivedrab;
   text-decoration: none;
+}
+
+.Lee_story_line {
+  color: gray;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.img_description {
+  color: gray;
 }
 
 .DivImg {
