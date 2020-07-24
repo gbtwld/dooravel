@@ -181,6 +181,10 @@ img {
   color: gray;
 }
 
+.not_upload {
+  color: gray;
+}
+
 .DivImg {
   height: 689px;
   width: 919px;
