@@ -169,6 +169,22 @@ img {
   text-decoration: none;
 }
 
+#title {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#title > div > h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#title > div > h5 {
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .Lee_story_line {
   color: gray;
   border-top: black 2px solid;
@@ -205,6 +221,8 @@ img {
   img {
     width: 50%;
     height: 50%;
+    display: block;
+    margin: auto;
   }
 
   /*h2 {
@@ -215,6 +233,11 @@ img {
     font-size: 14px;
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .img_description {
+    display: block;
+    text-align: center;
   }
 }
 
