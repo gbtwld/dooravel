@@ -209,7 +209,7 @@ img {
 .contents {
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 90px;
+  padding-top: 76px;
 }
 
 @media (min-width: 701px) {
@@ -290,7 +290,7 @@ img {
   }
 
   .contents {
-    padding-top: 80px;
+    padding-top: 55px;
   }
 
   /*h2 {
