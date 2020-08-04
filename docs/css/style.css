@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@font-face {
+  font-family: "Nanum Gothic";
+  src: local("Nanum Gothic"),
+    url("../assets/fonts/NanumBarunGothic.woff2") format("woff2"),
+    url("../assets/fonts/NanumBarunGothic.woff") format("woff"),
+    url("../assets/fonts/NanumBarunGothic.ttf") format("truetype"),
+    url("../assets/fonts/NanumBarunGothic.eot") format("embedded-opentype");
+}
 
 header * {
   padding: 0;
