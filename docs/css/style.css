@@ -8,6 +8,10 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header * {
   padding: 0;
   margin: 0;
