@@ -18,6 +18,7 @@ header * {
 }
 body {
   background: #fff;
+  font-family: "Nanum Gothic", sans-serif;
 }
 header {
   width: 100%;
