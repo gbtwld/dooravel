@@ -23,9 +23,10 @@ function sidebarChanger() {
     // }
   } else if (currentSite.includes("sanfrancisco")) {
     a_targets[7].classList.add("curcity");
-    // if (currentSite.includes("1st")) {
-    //   a_targets[8].classList.add("curpage");
-    // } else if (currentSite.includes("2nd")) {
+    if (currentSite.includes("1st")) {
+      a_targets[8].classList.add("curpage");
+    }
+    //else if (currentSite.includes("2nd")) {
     //   a_targets[9].classList.add("curpage");
     // } else if (currentSite.includes("3rd")) {
     //   a_targets[10].classList.add("curpage");
