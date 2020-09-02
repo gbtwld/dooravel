@@ -33,7 +33,6 @@ function handleCurrentArrAdress() {
       break;
     }
   }
-  console.log(current_arr_index);
 }
 
 if (next_button) {
@@ -66,8 +65,8 @@ function path_Identifier() {
 }
 
 function init() {
-  btn_selector();
   handleCurrentArrAdress();
+  btn_selector();
 }
 
 init();
