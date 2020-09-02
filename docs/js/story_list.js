@@ -26,27 +26,6 @@ function btn_selector() {
   }
 }
 
-prev_button.addEventListener("click", (event) => {
-  if (current_arr_index > 0) {
-    console.log(`https://dooravel.cf${html_arr[current_arr_index - 1]}`);
-    window.location.replace = `https://dooravel.cf${
-      html_arr[current_arr_index - 1]
-    }`;
-  } else {
-    console.log("There's no post.");
-  }
-});
-
-next_button.addEventListener("click", (event) => {
-  if (current_arr_index < 7) {
-    window.location.replace = `https://dooravel.cf${
-      html_arr[current_arr_index + 1]
-    }`;
-  } else {
-    console.log("There's no post.");
-  }
-});
-
 function handleCurrentArrAdress() {
   for (let i = 0; i < html_arr.length; i++) {
     if (currentPath == html_arr[i]) {
@@ -54,6 +33,32 @@ function handleCurrentArrAdress() {
       break;
     }
   }
+  console.log(currentPath);
+}
+
+if (next_button) {
+  next_button.addEventListener("click", (event) => {
+    if (current_arr_index < 7) {
+      window.location.replace = `https://dooravel.cf${
+        html_arr[current_arr_index + 1]
+      }`;
+    } else {
+      console.log("There's no post.");
+    }
+  });
+}
+
+if (prev_button) {
+  prev_button.addEventListener("click", (event) => {
+    if (current_arr_index > 0) {
+      console.log(`https://dooravel.cf${html_arr[current_arr_index - 1]}`);
+      window.location.replace = `https://dooravel.cf${
+        html_arr[current_arr_index - 1]
+      }`;
+    } else {
+      console.log("There's no post.");
+    }
+  });
 }
 
 function path_Identifier() {
@@ -64,7 +69,6 @@ function path_Identifier() {
 function init() {
   btn_selector();
   handleCurrentArrAdress();
-  console.log(current_arr_index);
 }
 
 init();
