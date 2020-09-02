@@ -4,6 +4,7 @@ const currentPath = path_Identifier();
 let current_arr_index = 0;
 
 const html_arr = [
+  "/index.html",
   "/seattle_1st.html",
   "/seattle_2nd.html",
   "/seattle_3rd.html",
