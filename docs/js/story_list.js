@@ -39,9 +39,9 @@ function handleCurrentArrAdress() {
 if (next_button) {
   next_button.addEventListener("click", (event) => {
     if (current_arr_index < 7) {
-      window.location.replace = `https://dooravel.cf${
-        html_arr[current_arr_index + 1]
-      }`;
+      window.location.replace(
+        `https://dooravel.cf${html_arr[current_arr_index + 1]}`
+      );
     } else {
       console.log("There's no post.");
     }
@@ -51,10 +51,9 @@ if (next_button) {
 if (prev_button) {
   prev_button.addEventListener("click", (event) => {
     if (current_arr_index > 0) {
-      console.log(`https://dooravel.cf${html_arr[current_arr_index - 1]}`);
-      window.location.replace = `https://dooravel.cf${
-        html_arr[current_arr_index - 1]
-      }`;
+      window.location.replace(
+        `https://dooravel.cf${html_arr[current_arr_index - 1]}`
+      );
     } else {
       console.log("There's no post.");
     }
