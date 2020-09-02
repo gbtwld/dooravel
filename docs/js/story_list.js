@@ -33,7 +33,7 @@ function handleCurrentArrAdress() {
       break;
     }
   }
-  console.log(currentPath);
+  console.log(current_arr_index);
 }
 
 if (next_button) {
