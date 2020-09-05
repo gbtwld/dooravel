@@ -258,6 +258,11 @@ img ~ span {
   transition: 0.3s ease-in-out;
 }
 
+.prev_post:focus,
+.next_post:focus {
+  outline: none;
+}
+
 .prev_post:hover {
   background-color: rgba(9, 156, 158, 1);
 }
@@ -267,7 +272,11 @@ img ~ span {
 }
 
 .not_exist {
-  display: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.not_exist:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 701px) {
