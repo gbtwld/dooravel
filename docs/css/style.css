@@ -279,6 +279,10 @@ img ~ span {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.not_exist:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: 701px) {
   #lv-container {
     padding: 150px;
