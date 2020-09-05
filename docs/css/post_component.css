@@ -54,12 +54,7 @@ img ~ span {
 }
 
 @media (max-width: 700px) {
-  #grid {
-    display: block;
-    grid-template-rows: 1fr 9fr;
-  }
-
-  .DivImg {
+  .grid-img-container__img {
     height: 300px;
     width: 612px;
   }
