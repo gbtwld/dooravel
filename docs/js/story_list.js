@@ -4,33 +4,34 @@ const currentPath = path_Identifier();
 let current_arr_index = 0;
 
 const html_arr = [
-  "/index.html",
-  "/seattle_1st.html",
-  "/seattle_2nd.html",
-  "/seattle_3rd.html",
+  "index.html",
+  "seattle_1st.html",
+  "seattle_2nd.html",
+  "seattle_3rd.html",
 
-  "/portland.html",
+  "portland.html",
 
-  "/sanfrancisco_1st.html",
+  "sanfrancisco_1st.html",
 
-  "/vegas.html",
-  "/vegas_1st.html",
+  "vegas.html",
+  "vegas_1st.html",
 
-  "/la.html",
+  "la.html",
 ];
 
 function btn_selector() {
   if (current_arr_index === 0) {
     prev_button.classList.add("not_exist");
-  } else if (current_arr_index === 7) {
+  } else if (current_arr_index === 8) {
     next_button.classList.add("not_exist");
   }
 }
 
 function handleCurrentArrAdress() {
   for (let i = 0; i < html_arr.length; i++) {
-    if (currentPath == html_arr[i]) {
+    if (currentPath.includes(html_arr[i])) {
       current_arr_index = i;
+      console.log(current_arr_index);
       break;
     }
   }
@@ -38,8 +39,8 @@ function handleCurrentArrAdress() {
 
 if (next_button) {
   next_button.addEventListener("click", (event) => {
-    if (current_arr_index < 7) {
-      window.location.href = `https://dooravel.cf${
+    if (current_arr_index < 8) {
+      window.location.href = `https://dooravel.cf/${
         html_arr[current_arr_index + 1]
       }`;
     } else {
@@ -51,7 +52,7 @@ if (next_button) {
 if (prev_button) {
   prev_button.addEventListener("click", (event) => {
     if (current_arr_index > 0) {
-      window.location.href = `https://dooravel.cf${
+      window.location.href = `https://dooravel.cf/${
         html_arr[current_arr_index - 1]
       }`;
     } else {
