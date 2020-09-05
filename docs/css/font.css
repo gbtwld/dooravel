@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Nanum Gothic";
+  src: local("Nanum Gothic"),
+    url("../assets/fonts/NanumBarunGothic.woff2") format("woff2"),
+    url("../assets/fonts/NanumBarunGothic.woff") format("woff"),
+    url("../assets/fonts/NanumBarunGothic.ttf") format("truetype"),
+    url("../assets/fonts/NanumBarunGothic.eot") format("embedded-opentype");
+  font-display: swap;
+}

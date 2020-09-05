@@ -1,0 +1,66 @@
+#title {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#title > div > h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#title > div > h5 {
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Lee_story_line {
+  color: gray;
+  border-top: black 2px solid;
+  border-bottom: black 2px solid;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.Lee_story_line__par {
+  font-style: italic;
+}
+
+img ~ span {
+  color: gray;
+}
+
+.grid-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  height: fit-content;
+}
+
+.grid-img-container__img {
+  height: 689px;
+  width: 919px;
+}
+
+.grid-img-container + span {
+  color: gray;
+}
+
+@media (min-width: 701px) {
+  img ~ span {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  #grid {
+    display: block;
+    grid-template-rows: 1fr 9fr;
+  }
+
+  .DivImg {
+    height: 300px;
+    width: 612px;
+  }
+}

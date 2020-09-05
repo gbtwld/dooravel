@@ -1,168 +1,17 @@
-@font-face {
-  font-family: "Nanum Gothic";
-  src: local("Nanum Gothic"),
-    url("../assets/fonts/NanumBarunGothic.woff2") format("woff2"),
-    url("../assets/fonts/NanumBarunGothic.woff") format("woff"),
-    url("../assets/fonts/NanumBarunGothic.ttf") format("truetype"),
-    url("../assets/fonts/NanumBarunGothic.eot") format("embedded-opentype");
-  font-display: swap;
-}
+@import "font.css";
+@import "swiper.css";
+@import "header.css";
+@import "post_component.css";
+@import "post_button.css";
 
 html {
   scroll-behavior: smooth;
 }
 
-header * {
-  padding: 0;
-  margin: 0;
-}
 body {
   background: #f5f6fa;
   font-family: "Nanum Gothic", sans-serif;
-}
-header {
-  width: 100%;
-  background: #099c9e;
-  position: fixed;
-  z-index: 10;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-.header-list {
-  width: 100%;
-  margin: 0 auto;
-  font-size: 0;
-  padding: 15px 0;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-.header-list > li {
-  font-size: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.header-list > li:nth-child(1) {
-  font-size: 21px;
-  width: 200px;
-}
-.header-list > li:nth-child(2) {
-  width: calc(100% - 300px);
-}
-.header-list > li:nth-child(3) {
-  width: 50px;
-}
-.header-list > li > div {
-  width: auto;
-}
-
-.menu-ul {
-  font-size: 0;
-}
-.menu-ul > li {
-  font-size: 14px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.menu-ul > li > a {
-  display: block;
-  width: auto;
-  padding: 15px;
-}
-
-input[id="menuicon"] {
-  display: none;
-}
-input[id="menuicon"] + label {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 40px;
-  cursor: pointer;
-}
-input[id="menuicon"] + label span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 30px;
-  background: #666;
-  transition: all 0.35s;
-}
-input[id="menuicon"] + label span:nth-child(1) {
-  top: 10%;
-}
-input[id="menuicon"] + label span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-} /* 비슷하게 사용할 수 있는 style top:calc(50% - 2.5px); margin-top:-2.5px;*/
-input[id="menuicon"] + label span:nth-child(3) {
-  bottom: 10%;
-}
-input[id="menuicon"]:checked + label {
-  z-index: 2;
-}
-input[id="menuicon"]:checked + label span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-input[id="menuicon"]:checked + label span:nth-child(2) {
-  opacity: 0;
-}
-input[id="menuicon"]:checked + label span:nth-child(3) {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-45deg);
-}
-div[class="sidebar"] {
-  width: 100%;
-  height: 0px;
-  background: rgba(253, 227, 200, 0.9);
-  position: fixed;
-  top: 76px;
-  left: 0;
-  z-index: 1;
-  transition: all 0.35s;
-  overflow: hidden;
-}
-input[id="menuicon"]:checked + label + div {
-  height: 185px;
-}
-
-.sitemap-ul {
-  font-size: 0;
-  width: 100%;
-  margin: 15px auto;
-  text-align: center;
-  list-style: none;
-}
-.sitemap-ul > li {
-  font-size: 16px;
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-  list-style: none;
-}
-
-.sitemap-ul > li > ul > li {
-  font-size: 20px;
-  list-style: none;
-}
-
-/*.sitemap-ul * li {
-  font-size: 20px;
-  list-style: none;
-}*/
-
-body {
   margin: 0;
-  font-family: "Nanum Gothic", sans-serif;
 }
 
 h1 {
@@ -182,202 +31,24 @@ img {
   height: auto;
 }
 
-.curpage {
-  color: firebrick;
-  text-decoration: none;
-}
-
-.curcity {
-  color: #f39c12;
-  text-decoration: none;
-}
-
-#title {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-#title > div > h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-#title > div > h5 {
-  text-align: right;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.Lee_story_line {
-  color: gray;
-  border-top: black 2px solid;
-  border-bottom: black 2px solid;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-img ~ span {
-  color: gray;
-}
-
-.not_upload {
-  color: gray;
-}
-
-.DivImg {
-  height: 689px;
-  width: 919px;
-}
-
 .contents {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 76px;
 }
 
-.btn_wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.prev_post,
-.next_post {
-  width: 60px;
-  height: 30px;
-  background-color: rgba(9, 156, 158, 0.5);
-  border: 1.5px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  transition: 0.3s ease-in-out;
-}
-
-.prev_post:focus,
-.next_post:focus {
-  outline: none;
-}
-
-.prev_post:hover {
-  background-color: rgba(9, 156, 158, 1);
-}
-
-.next_post:hover {
-  background-color: rgba(9, 156, 158, 1);
-}
-
-.not_exist {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.not_exist:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.not_exist:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
 @media (min-width: 701px) {
-  #lv-container {
-    padding: 150px;
-    padding-top: 50px;
-  }
-
   img {
     width: 50%;
     height: 50%;
     display: block;
     margin: auto;
   }
-
-  /*h2 {
-    padding-bottom: 12px;
-  }*/
-
-  .menu-ul > li {
-    font-size: 14px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  img ~ span {
-    display: block;
-    text-align: center;
-  }
-
-  .btn_wrap {
-    justify-content: flex-end;
-  }
-
-  .prev_post,
-  .next_post {
-    margin-left: 15px;
-  }
 }
 
 @media (max-width: 700px) {
-  #grid {
-    display: block;
-    grid-template-rows: 1fr 9fr;
-  }
-
-  #lv-container {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .header-list > li:nth-child(1) {
-    margin-right: 36px;
-  }
-
-  input[id="menuicon"] + label {
-    display: block;
-    position: relative;
-    width: 60%;
-    height: 25px;
-    cursor: pointer;
-  }
-
   .DivImg {
     height: 300px;
     width: 612px;
-  }
-
-  .menu-ul {
-    display: none;
-  }
-  .sitemap-ul > li {
-    font-size: 10px;
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    list-style: none;
-  }
-
-  .sitemap-ul > li > ul > li {
-    font-size: 16px;
-    list-style: none;
-  }
-
-  input[id="menuicon"]:checked + label + div {
-    height: 150px;
-  }
-
-  .contents {
-    padding-top: 55px;
-  }
-
-  /*h2 {
-    padding-bottom: 10px;
-  }*/
-
-  div[class="sidebar"] {
-    top: 55px;
   }
 }

@@ -1,0 +1,58 @@
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+.btn_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev_post,
+.next_post {
+  width: 60px;
+  height: 30px;
+  background-color: rgba(9, 156, 158, 0.5);
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.prev_post:focus,
+.next_post:focus {
+  outline: none;
+}
+
+.prev_post:hover {
+  background-color: rgba(9, 156, 158, 1);
+}
+
+.next_post:hover {
+  background-color: rgba(9, 156, 158, 1);
+}
+
+.not_exist {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.not_exist:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.not_exist:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 701px) {
+  .btn_wrap {
+    justify-content: flex-end;
+  }
+
+  .prev_post,
+  .next_post {
+    margin-left: 15px;
+  }
+}
