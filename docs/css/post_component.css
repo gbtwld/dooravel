@@ -51,6 +51,13 @@ img ~ span {
     display: block;
     text-align: center;
   }
+
+  .story {
+    margin: 0px 100px;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    background-color: #ecf0f1;
+  }
 }
 
 @media (max-width: 700px) {
