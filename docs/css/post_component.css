@@ -27,7 +27,7 @@
 }
 
 img ~ span {
-  color: gray;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .grid-img-container {
@@ -44,6 +44,11 @@ img ~ span {
 
 .grid-img-container + span {
   color: gray;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 701px) {
@@ -68,5 +73,15 @@ img ~ span {
   .grid-img-container__img {
     height: 300px;
     width: 612px;
+  }
+
+  .special-img-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .special-img {
+    max-width: 200%;
+    width: 100vw;
   }
 }
