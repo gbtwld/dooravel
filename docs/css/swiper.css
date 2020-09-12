@@ -9,6 +9,11 @@
   background-size: cover;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  outline: 0;
+}
+
 /* @media (max-width: 700px) {
   #next-button {
     display: none;
