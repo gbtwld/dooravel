@@ -1,6 +1,7 @@
 import routes from "../routes";
 
-export const homeControl = (req, res) => res.send("HOME");
+export const homeControl = (req, res) =>
+  res.render("home", { pageTitle: "Home" });
 export const joinControl = (req, res) => res.send("JOIN");
 export const loginControl = (req, res) => res.send("LOGIN");
 export const logoutControl = (req, res) => res.send("LOGOUT");

@@ -5,7 +5,7 @@ const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
 
-// User Routers **약간의 변경 필요**
+// User Routers **약간의 변경 필요(유저 정보 변경하는게 다 id가 앞에 붙어야 할까?)**
 const USERS = "/users";
 const PROFILE = "/:id";
 const EDIT_PROFILE = "/edit-profile";
