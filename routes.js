@@ -5,8 +5,8 @@ const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
 
-// User Routers
-const USER = "/user";
+// User Routers **약간의 변경 필요**
+const USERS = "/users";
 const PROFILE = "/:id";
 const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
@@ -28,7 +28,7 @@ const routes = {
   logout: LOGOUT,
   search: SEARCH,
 
-  user: USER,
+  users: USERS,
   profile: PROFILE,
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,

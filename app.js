@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 app.use(routes.home, globalRouter);
-app.use(routes.user, userRouter);
+app.use(routes.users, userRouter);
 app.use(routes.series, seriesRouter);
 
 export default app;

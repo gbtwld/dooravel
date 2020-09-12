@@ -1,16 +1,26 @@
 import express from "express";
+import {
+  postDeleteControll,
+  postEditControll,
+  postWriteControll,
+  seriesControll,
+  seriesCreateControll,
+  seriesDeleteControll,
+  seriesDetailControll,
+  seriesEditControll,
+} from "../controllers/seriesController";
 import routes from "../routes";
 
 const seriesRouter = express.Router();
 
-seriesRouter.get(routes.home, (req, res) => res.send("SERIES"));
-seriesRouter.get(routes.seriesCreate, (req, res) => res.send("SERIES_CREATE"));
-seriesRouter.get(routes.seriesDetail, (req, res) => res.send("SERIES_DETAIL"));
-seriesRouter.get(routes.seriesEdit, (req, res) => res.send("SERIES_EDIT"));
-seriesRouter.get(routes.seriesDelete, (req, res) => res.send("SERIES_DELETE"));
+seriesRouter.get(routes.home, seriesControll);
+seriesRouter.get(routes.seriesCreate, seriesCreateControll);
+seriesRouter.get(routes.seriesDetail, seriesDetailControll);
+seriesRouter.get(routes.seriesEdit, seriesEditControll);
+seriesRouter.get(routes.seriesDelete, seriesDeleteControll);
 
-seriesRouter.get(routes.postWrite, (req, res) => res.send("POST_WRITE"));
-seriesRouter.get(routes.postEdit, (req, res) => res.send("POST_EDIT"));
-seriesRouter.get(routes.postDelete, (req, res) => res.send("POST_DELETE"));
+seriesRouter.get(routes.postWrite, postWriteControll);
+seriesRouter.get(routes.postEdit, postEditControll);
+seriesRouter.get(routes.postDelete, postDeleteControll);
 
 export default seriesRouter;
