@@ -21,4 +21,3 @@ function SVS_B(eAmt, where) {
 }
 
 toChatBtn.addEventListener("click", toChatHandler);
-document.addEventListener("scroll", scrollHandler);
