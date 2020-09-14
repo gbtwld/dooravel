@@ -3,6 +3,7 @@
 @import "header.css";
 @import "post_component.css";
 @import "post_button.css";
+@import "toChat.css";
 
 html {
   scroll-behavior: smooth;

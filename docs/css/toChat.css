@@ -1,0 +1,26 @@
+.toChat {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 15px;
+  right: 8px;
+}
+
+.toChat__btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  background-color: powderblue;
+  transition: background-color 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.toChat__btn:active {
+  background-color: slateblue;
+  transform: translateY(50px);
+}
+
+.toChat__btn:hover {
+  background-color: skyblue;
+}
