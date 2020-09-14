@@ -13,12 +13,10 @@
   border: none;
   background-color: powderblue;
   transition: background-color 0.5s ease-in-out;
-  transition: transform 1s ease-in-out;
 }
 
 .toChat__btn:active {
   background-color: slateblue;
-  transform: translateY(50px);
 }
 
 .toChat__btn:hover {
