@@ -1,7 +1,7 @@
 const toChatBtn = document.querySelector(".toChat__btn");
 
 const toChatHandler = () => {
-  window.location.href = "#btn_wrap";
+  window.location.href = "#disqus_thread";
   toChatBtn.classList.add("toChat__btn__clicked");
 };
 
