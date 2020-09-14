@@ -5,7 +5,7 @@ button,
   -webkit-appearance: button;
 }
 
-.btn_wrap {
+#btn_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,7 +48,7 @@ button,
 }
 
 @media (min-width: 701px) {
-  .btn_wrap {
+  #btn_wrap {
     justify-content: flex-end;
   }
 
