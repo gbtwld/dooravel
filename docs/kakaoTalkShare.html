@@ -1,0 +1,17 @@
+<a id="kakao-link-btn" href="javascript:sendLink()">
+    <img src="assets/kakao_link_btn.png" style="all: unset; width: 150px" />
+</a>
+<script type="text/javascript">
+    // 웹 플랫폼 도메인 등 초기화한 앱의 설정이 그대로 적용됩니다.
+    // 초기화한 앱에 현재 도메인이 등록되지 않은 경우 에러가 발생합니다.
+    Kakao.init("23327c42cd4ed0e421d19d8b97b099b2");
+    function sendLink() {
+        Kakao.Link.sendCustom({
+            templateId: 33204,
+            templateArgs: {
+                title: "미국 여행기",
+                description: "네 친구들이 떠난 즐거운 미국 여행 이야기",
+            },
+        });
+    }
+</script>
