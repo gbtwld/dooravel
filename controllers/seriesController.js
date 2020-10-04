@@ -1,11 +1,22 @@
 import routes from "../routes";
 
-export const seriesControll = (req, res) => res.send("SERIES");
-export const seriesCreateControll = (req, res) => res.send("SERIES_CREATE");
-export const seriesDetailControll = (req, res) => res.send("SERIES_DETAIL");
-export const seriesEditControll = (req, res) => res.send("SERIES_EDIT");
-export const seriesDeleteControll = (req, res) => res.send("SERIES_DELETE");
-export const postWriteControll = (req, res) => res.send("POST_WRITE");
-export const postEditControll = (req, res) => res.send("POST_EDIT");
-export const postDeleteControll = (req, res) => res.send("POST_DELETE");
-export const searchControll = (req, res) => res.send("SEARCH");
+export const seriesControll = (req, res) =>
+  res.render("series", { pageTitle: "Series" });
+export const seriesCreateControll = (req, res) =>
+  res.render("seriesCreate", { pageTitle: "Series-Create" });
+export const seriesDetailControll = (req, res) =>
+  res.render("seriesDetail", { pageTitle: "Series-Detail" });
+export const seriesEditControll = (req, res) =>
+  res.render("seriesEdit", { pageTitle: "Series-Edit" });
+export const seriesDeleteControll = (req, res) =>
+  res.render("seriesDelete", { pageTitle: "Series-Delete" });
+export const postWriteControll = (req, res) =>
+  res.render("postWrite", { pageTitle: "Post-Write" });
+export const postDetailControll = (req, res) =>
+  res.render("postDetail", { pageTitle: "Post-Detail" });
+export const postEditControll = (req, res) =>
+  res.render("postEdit", { pageTitle: "Post-Edit" });
+export const postDeleteControll = (req, res) =>
+  res.render("postDelete", { pageTitle: "Post-Delete" });
+export const searchControll = (req, res) =>
+  res.render("search", { pageTitle: "Search" });

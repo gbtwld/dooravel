@@ -2,10 +2,17 @@ import routes from "../routes";
 
 export const homeControl = (req, res) =>
   res.render("home", { pageTitle: "Home" });
-export const joinControl = (req, res) => res.send("JOIN");
-export const loginControl = (req, res) => res.send("LOGIN");
-export const logoutControl = (req, res) => res.send("LOGOUT");
-export const usersControl = (req, res) => res.send("USERS");
-export const editProfileControl = (req, res) => res.send("EDIT_PROFILE");
-export const changePasswordControl = (req, res) => res.send("CHANGE_PASSWORD");
-export const profileControl = (req, res) => res.send("PROFILE");
+export const joinControl = (req, res) =>
+  res.render("join", { pageTitle: "Join" });
+export const loginControl = (req, res) =>
+  res.render("login", { pageTitle: "Login" });
+export const logoutControl = (req, res) =>
+  res.render("logout", { pageTitle: "Logout" });
+export const usersControl = (req, res) =>
+  res.render("users", { pageTitle: "Users" });
+export const editProfileControl = (req, res) =>
+  res.render("editProfile", { pageTitle: "Edit-Profile" });
+export const changePasswordControl = (req, res) =>
+  res.render("changePassword", { pageTitle: "Change-Password" });
+export const profileControl = (req, res) =>
+  res.render("profile", { pageTitle: "Profile" });

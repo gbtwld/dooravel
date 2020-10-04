@@ -5,7 +5,7 @@ const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
 
-// User Routers **약간의 변경 필요(유저 정보 변경하는게 다 id가 앞에 붙어야 할까?)**
+// User Routers
 const USERS = "/users";
 const PROFILE = "/:id";
 const EDIT_PROFILE = "/edit-profile";
@@ -17,6 +17,7 @@ const SERIES_CREATE = "/series-create";
 const SERIES_DETAIL = "/:seriesId";
 const SERIES_EDIT = "/:seriesId/edit";
 const SERIES_DELETE = "/:seriesId/delete";
+const POST_DETAIL = "/:seriesID/:postID";
 const POST_WRITE = "/:seriesId/post-write";
 const POST_EDIT = "/:seriesId/:postId/post-edit";
 const POST_DELETE = "/:seriesId/:postId/post-delete";
@@ -40,6 +41,7 @@ const routes = {
   seriesDelete: SERIES_DELETE,
 
   postWrite: POST_WRITE,
+  postDetail: POST_DETAIL,
   postEdit: POST_EDIT,
   postDelete: POST_DELETE,
 };
