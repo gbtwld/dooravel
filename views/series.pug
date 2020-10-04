@@ -1,4 +1,9 @@
 extends ./layouts/main
 
 block content
-    p SERIES
+    h1 SERIES
+    a(href=routes.series + routes.seriesCreate) Create
+    each item in seriesData
+        a(href=`${routes.series}/${item.id}`)
+            h3=item.title
+            p=item.description
