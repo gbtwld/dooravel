@@ -1,6 +1,9 @@
+import "./db";
 import app from "./app";
 import dotenv from "dotenv";
 dotenv.config();
+import "./models/Series";
+import "./models/Post";
 
 const PORT = process.env.PORT;
 

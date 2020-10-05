@@ -1,21 +1,84 @@
 import routes from "../routes";
-import { seriesData } from "../db";
+import Series from "../models/Series";
 
-export const seriesControll = (req, res) =>
-  res.render("series", { pageTitle: "Series", seriesData });
-
-export const seriesCreateControll = (req, res) =>
-  res.render("seriesCreate", { pageTitle: "Series-Create" });
-
-export const seriesDetailControll = (req, res) => {
-  res.render("seriesDetail", { pageTitle: "Series-Detail" });
+export const seriesControll = async (req, res) => {
+  try {
+    const series = await Series.find({}).sort({ _id: -1 });
+    res.render("series", { pageTitle: "Series", series });
+  } catch (error) {
+    console.log(error);
+    res.render("series", { pageTitle: "Series", series: [] });
+  }
 };
 
-export const seriesEditControll = (req, res) =>
-  res.render("seriesEdit", { pageTitle: "Series-Edit" });
+export const seriesCreateControll = async (req, res) => {
+  if (req.method === "GET") {
+    res.render("seriesCreate", { pageTitle: "Series-Create" });
+  } else if (req.method === "POST") {
+    const {
+      body: { series_title, series_description },
+    } = req;
+    const newSeries = await Series.create({
+      title: series_title,
+      description: series_description,
+    });
+    res.redirect(routes.seriesDetail(newSeries._id));
+  }
+};
 
-export const seriesDeleteControll = (req, res) =>
-  res.render("seriesDelete", { pageTitle: "Series-Delete" });
+export const seriesDetailControll = async (req, res) => {
+  const {
+    params: { seriesId },
+  } = req;
+  try {
+    const series = await Series.findById(seriesId);
+    res.render("seriesDetail", { pageTitle: "Series-Detail", series });
+  } catch (error) {
+    console.log(error);
+    res.redirect(routes.home);
+  }
+};
+
+export const seriesEditControll = async (req, res) => {
+  const {
+    params: { seriesId },
+  } = req;
+  if (req.method === "GET") {
+    try {
+      const series = await Series.findById(seriesId);
+      res.render("seriesEdit", { pageTitle: "Series-Edit", series });
+    } catch (error) {
+      console.log(error);
+      res.redirect(routes.series + routes.seriesDetail(seriesId));
+    }
+  } else if (req.method === "POST") {
+    const {
+      body: { series_title, series_description },
+    } = req;
+    try {
+      await Series.findOneAndUpdate(
+        { _id: seriesId },
+        { title: series_title, description: series_description }
+      );
+      res.redirect(`/series/${routes.seriesDetail(seriesId)}`);
+    } catch (error) {
+      console.log(error);
+      res.redirect(routes.series + routes.seriesDetail(seriesId));
+    }
+  }
+};
+
+export const seriesDeleteControll = async (req, res) => {
+  const {
+    params: { seriesId },
+  } = req;
+  try {
+    await Series.findOneAndDelete({ _id: seriesId });
+  } catch (error) {
+    console.log(error);
+  }
+  res.redirect(routes.series);
+};
 
 export const postWriteControll = (req, res) =>
   res.render("postWrite", { pageTitle: "Post-Write" });

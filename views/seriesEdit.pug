@@ -1,4 +1,8 @@
 extends ./layouts/main
 
 block content
-    h1 SERIES_EDIT
+    form.series-form(action=routes.series + routes.seriesEdit(series.id), method="post")
+        input(type="text",name="series_title",placeholder="제목을 입력하세요.",required="true", value=series.title)
+        textarea(name="series_description",placeholder="설명을 입력하세요.",required="true")=series.description
+        input(type="submit", value="등록")
+    a(href=routes.series + routes.seriesDelete(series.id)) Delete

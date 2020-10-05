@@ -15,10 +15,16 @@ import routes from "../routes";
 const seriesRouter = express.Router();
 
 seriesRouter.get(routes.home, seriesControll);
+
 seriesRouter.get(routes.seriesCreate, seriesCreateControll);
-seriesRouter.get(routes.seriesDetail, seriesDetailControll);
-seriesRouter.get(routes.seriesEdit, seriesEditControll);
-seriesRouter.get(routes.seriesDelete, seriesDeleteControll);
+seriesRouter.post(routes.seriesCreate, seriesCreateControll);
+
+seriesRouter.get(routes.seriesDetail(), seriesDetailControll);
+
+seriesRouter.get(routes.seriesEdit(), seriesEditControll);
+seriesRouter.post(routes.seriesEdit(), seriesEditControll);
+
+seriesRouter.get(routes.seriesDelete(), seriesDeleteControll);
 
 seriesRouter.get(routes.postWrite, postWriteControll);
 seriesRouter.get(routes.postDetail, postDetailControll);

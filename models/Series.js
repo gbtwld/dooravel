@@ -10,10 +10,19 @@ const SeriesSchema = new mongoose.Schema({
     required: "Description is required!",
   },
   createdAt: {
-    type: String,
+    type: Date,
     default: Date.now,
   },
   author: {
     type: String,
   },
+  innerPosts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Post",
+    },
+  ],
 });
+
+const model = mongoose.model("Series", SeriesSchema);
+export default model;

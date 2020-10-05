@@ -1,4 +1,7 @@
 extends ./layouts/main
 
 block content
-    h1 SERIES_DETAIL
+    h1=series.title
+    a(href=routes.series + routes.seriesEdit(series.id)) Edit
+    h4=series.createdAt
+    p=series.description

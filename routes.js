@@ -36,9 +36,27 @@ const routes = {
 
   series: SERIES,
   seriesCreate: SERIES_CREATE,
-  seriesDetail: SERIES_DETAIL,
-  seriesEdit: SERIES_EDIT,
-  seriesDelete: SERIES_DELETE,
+  seriesDetail: (id) => {
+    if (id) {
+      return id;
+    } else {
+      return SERIES_DETAIL;
+    }
+  },
+  seriesEdit: (id) => {
+    if (id) {
+      return `/${id}/edit`;
+    } else {
+      return SERIES_EDIT;
+    }
+  },
+  seriesDelete: (id) => {
+    if (id) {
+      return `/${id}/delete`;
+    } else {
+      return SERIES_DELETE;
+    }
+  },
 
   postWrite: POST_WRITE,
   postDetail: POST_DETAIL,

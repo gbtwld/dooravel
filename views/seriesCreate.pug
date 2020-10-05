@@ -1,7 +1,7 @@
 extends ./layouts/main
 
 block content
-    form.series-form(action=`/series${routes.seriesCreate}`, method="post", enctype="multipart/form-data")
+    form.series-form(action=routes.series + routes.seriesCreate, method="post")
         input(type="text",name="series_title",placeholder="제목을 입력하세요.",required="true")
         textarea(name="series_description",placeholder="설명을 입력하세요.",required="true")
         input(type="submit", value="등록")
