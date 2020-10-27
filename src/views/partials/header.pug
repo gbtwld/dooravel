@@ -1,10 +1,10 @@
 header.header
     .header__column
-        .header__column__logo
-            a(href=routes.home)
+        a(href=routes.home)
+            .header__column__logo
                 i.fas.fa-globe.fa-lg
-        .header__column__title
-            | Dooravel
+            .header__column__title
+                | Dooravel
     .header__column
         form(action=routes.search, method="get")
             input(type="text", placeholder="Search by term...", name="term")

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  .header__column {
+    &:first-child {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+        font-weight: 600;
+        .header__column__logo {
+          margin-right: 5px;
+        }
+      }
+    }
+    &:last-child {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
