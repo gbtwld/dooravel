@@ -1,0 +1,6 @@
+extends ./layouts/main
+
+block content
+    h1=post.title
+    a(href=routes.series + routes.postEdit(series.id, post.id)) Edit
+    p=post.content

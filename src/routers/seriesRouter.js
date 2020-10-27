@@ -26,9 +26,14 @@ seriesRouter.post(routes.seriesEdit(), seriesEditControll);
 
 seriesRouter.get(routes.seriesDelete(), seriesDeleteControll);
 
-seriesRouter.get(routes.postWrite, postWriteControll);
-seriesRouter.get(routes.postDetail, postDetailControll);
-seriesRouter.get(routes.postEdit, postEditControll);
-seriesRouter.get(routes.postDelete, postDeleteControll);
+seriesRouter.get(routes.postWrite(), postWriteControll);
+seriesRouter.post(routes.postWrite(), postWriteControll);
+
+seriesRouter.get(routes.postDetail(), postDetailControll);
+
+seriesRouter.get(routes.postEdit(), postEditControll);
+seriesRouter.post(routes.postEdit(), postEditControll);
+
+seriesRouter.get(routes.postDelete(), postDeleteControll);
 
 export default seriesRouter;

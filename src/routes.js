@@ -17,7 +17,7 @@ const SERIES_CREATE = "/series-create";
 const SERIES_DETAIL = "/:seriesId";
 const SERIES_EDIT = "/:seriesId/edit";
 const SERIES_DELETE = "/:seriesId/delete";
-const POST_DETAIL = "/:seriesID/:postID";
+const POST_DETAIL = "/:seriesId/:postId";
 const POST_WRITE = "/:seriesId/post-write";
 const POST_EDIT = "/:seriesId/:postId/post-edit";
 const POST_DELETE = "/:seriesId/:postId/post-delete";
@@ -38,7 +38,7 @@ const routes = {
   seriesCreate: SERIES_CREATE,
   seriesDetail: (id) => {
     if (id) {
-      return id;
+      return `/${id}`;
     } else {
       return SERIES_DETAIL;
     }
@@ -58,10 +58,34 @@ const routes = {
     }
   },
 
-  postWrite: POST_WRITE,
-  postDetail: POST_DETAIL,
-  postEdit: POST_EDIT,
-  postDelete: POST_DELETE,
+  postWrite: (id) => {
+    if (id) {
+      return `/${id}/post-write`;
+    } else {
+      return POST_WRITE;
+    }
+  },
+  postDetail: (seriesId, postId) => {
+    if (seriesId && postId) {
+      return `/${seriesId}/${postId}`;
+    } else {
+      return POST_DETAIL;
+    }
+  },
+  postEdit: (seriesId, postId) => {
+    if (seriesId && postId) {
+      return `/${seriesId}/${postId}/post-edit`;
+    } else {
+      return POST_EDIT;
+    }
+  },
+  postDelete: (seriesId, postId) => {
+    if (seriesId && postId) {
+      return `/${seriesId}/${postId}/post-delete`;
+    } else {
+      return POST_DELETE;
+    }
+  },
 };
 
 export default routes;

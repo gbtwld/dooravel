@@ -1,0 +1,8 @@
+extends ./layouts/main
+
+block content
+    form.series-form(action=routes.series + routes.postEdit(series.id, post.id), method="post")
+        input(type="text",name="post_title",placeholder="제목을 입력하세요.",required="true", value=post.title)
+        textarea(name="post_content",placeholder="내용을 입력하세요.",required="true")=post.content
+        input(type="submit", value="등록")
+    a(href=routes.series + routes.postDelete(series.id,post.id)) Delete

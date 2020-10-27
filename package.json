@@ -4,7 +4,9 @@
   "description": "Record our travels.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node init.js --delay 1"
+    "dev:server": "nodemon --exec babel-node src/init.js --delay 2 --ignore '.scss' --ignore 'static' ",
+    "dev:assets": "cd src && WEBPACK_ENV=development webpack -w",
+    "build:assets": "cd src && WEBPACK_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -17,19 +19,32 @@
   },
   "homepage": "https://github.com/gbtwld/dooravel#readme",
   "dependencies": {
+    "@babel/cli": "^7.12.1",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^10.0.1",
+    "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
+    "css-loader": "^5.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "helmet": "^4.1.1",
     "mongoose": "^5.10.7",
     "morgan": "^1.10.0",
-    "pug": "^3.0.0"
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.4",
+    "postcss-loader": "^4.0.4",
+    "pug": "^3.0.0",
+    "sass-loader": "^10.0.4",
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0"
   },
   "devDependencies": {
+    "mini-css-extract-plugin": "^1.2.0",
     "nodemon": "^2.0.4"
   }
 }

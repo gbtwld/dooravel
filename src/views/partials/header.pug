@@ -6,7 +6,8 @@ header.header
         .header__column__title
             | Dooravel
     .header__column
-        //- search
+        form(action=routes.search, method="get")
+            input(type="text", placeholder="Search by term...", name="term")
     .header__column
         ul
             li 

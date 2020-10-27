@@ -1,0 +1,12 @@
+extends ./layouts/main
+
+block content
+    h1=series.title
+    a(href=routes.series + routes.seriesEdit(series.id)) Edit
+    a(href=routes.series + routes.postWrite(series.id)) Write post
+    h4=series.createdAt
+    p=series.description
+    .posts-container
+        each post in series.innerPosts
+            a(href=`${routes.series}/${series.id}/${post.id}`)=post.title
+        
