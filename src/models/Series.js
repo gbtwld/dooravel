@@ -16,6 +16,9 @@ const SeriesSchema = new mongoose.Schema({
   author: {
     type: String,
   },
+  thumbnailUrl: {
+    type: String,
+  },
   innerPosts: [
     {
       type: mongoose.Schema.Types.ObjectId,

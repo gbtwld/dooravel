@@ -10,6 +10,7 @@ import {
   seriesDetailControll,
   seriesEditControll,
 } from "../controllers/seriesController";
+import { uploadThumbnail } from "../middelWares";
 import routes from "../routes";
 
 const seriesRouter = express.Router();
@@ -17,7 +18,7 @@ const seriesRouter = express.Router();
 seriesRouter.get(routes.home, seriesControll);
 
 seriesRouter.get(routes.seriesCreate, seriesCreateControll);
-seriesRouter.post(routes.seriesCreate, seriesCreateControll);
+seriesRouter.post(routes.seriesCreate, uploadThumbnail, seriesCreateControll);
 
 seriesRouter.get(routes.seriesDetail(), seriesDetailControll);
 

@@ -1,7 +1,14 @@
 import routes from "../routes";
+import Series from "../models/Series";
 
-export const homeControl = (req, res) =>
-  res.render("home", { pageTitle: "Home" });
+export const homeControl = async (req, res) => {
+  try {
+    const series = await Series.find({}).sort({ _id: -1 });
+    res.render("home", { pageTitle: "Home", series });
+  } catch (error) {
+    console.log(error);
+  }
+};
 export const joinControl = (req, res) =>
   res.render("join", { pageTitle: "Join" });
 export const loginControl = (req, res) =>

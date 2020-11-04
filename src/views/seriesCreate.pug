@@ -1,7 +1,10 @@
 extends ./layouts/main
 
 block content
-    form.series-form(action=routes.series + routes.seriesCreate, method="post")
+    form.series-form(action=routes.series + routes.seriesCreate, method="post", enctype="multipart/form-data")
         input(type="text",name="series_title",placeholder="제목을 입력하세요.",required="true")
+        div.fileUpload
+                label(for="thumbnail") 이미지 파일
+                input(type="file", id="thumbnail", name="thumbnail", required=true, accept="image/*")
         textarea(name="series_description",placeholder="설명을 입력하세요.",required="true")
         input(type="submit", value="등록")

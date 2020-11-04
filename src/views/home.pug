@@ -1,4 +1,7 @@
 extends ./layouts/main
 
 block content
-    h1 HOME
+    each item in series
+        a(href=`${routes.series}/${item.id}`)
+            h3=item.title
+            p=item.description

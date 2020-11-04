@@ -3,5 +3,6 @@ extends ./layouts/main
 block content
     form.post-form(action=routes.series + routes.postWrite(series.id), method="post")
         input(type="text",name="post_title",placeholder="제목을 입력하세요.",required="true")
-        textarea(name="post_content",placeholder="내용을 입력하세요.",required="true")
+        //- textarea(name="post_content",placeholder="내용을 입력하세요.",required="true")
         input(type="submit", value="등록")
+    #jsEditor

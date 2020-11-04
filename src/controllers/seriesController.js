@@ -18,11 +18,14 @@ export const seriesCreateControll = async (req, res) => {
   } else if (req.method === "POST") {
     const {
       body: { series_title, series_description },
+      file: { location },
     } = req;
+    console.log(location);
     const newSeries = await Series.create({
       title: series_title,
       description: series_description,
       innerPosts: [],
+      thumbnailUrl: location,
     });
     res.redirect(routes.series + routes.seriesDetail(newSeries._id));
   }
