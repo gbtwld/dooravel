@@ -52,6 +52,11 @@ img {
 }
 
 @media (min-width: 701px) {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
   img ~ span {
     display: block;
     text-align: center;

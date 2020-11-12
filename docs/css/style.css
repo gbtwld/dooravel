@@ -1,10 +1,10 @@
-@import 'font.css';
-@import 'swiper.css';
-@import 'mainPage.css';
-@import 'header.css';
-@import 'post_component.css';
-@import 'post_button.css';
-@import 'toChat.css';
+@import "font.css";
+@import "swiper.css";
+@import "mainPage.css";
+@import "header.css";
+@import "post_component.css";
+@import "post_button.css";
+@import "toChat.css";
 
 html {
   scroll-behavior: smooth;
@@ -12,7 +12,7 @@ html {
 
 body {
   /* background: #f5f6fa; */
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   margin: 0;
 }
 
@@ -31,7 +31,7 @@ a {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 76px;
-  line-height: 150%;
+  line-height: 160%;
 }
 
 @media (min-width: 701px) {
