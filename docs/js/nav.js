@@ -16,13 +16,11 @@ function sidebarChanger() {
     }
   } else if (currentSite.includes("portland")) {
     a_targets[4].classList.add("curcity");
-    a_targets[5].classList.add("curpage"); //2일차 올라오면 수정 바람(삭제)
-    // if (currentSite.includes("1st")) {
-    //   a_targets[5].classList.add("curpage");
-    // }
-    // else if (currentSite.includes("2nd")) {
-    //   a_targets[6].classList.add("curpage");
-    // }
+    if (currentSite.includes("1st")) {
+      a_targets[5].classList.add("curpage");
+    } else if (currentSite.includes("2nd")) {
+      a_targets[6].classList.add("curpage");
+    }
   } else if (currentSite.includes("sanfrancisco")) {
     a_targets[7].classList.add("curcity");
     if (currentSite.includes("1st")) {

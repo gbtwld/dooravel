@@ -10,6 +10,7 @@ const html_arr = [
   "seattle_3rd.html",
 
   "portland.html",
+  "portland_2nd.html",
 
   "sanfrancisco_1st.html",
   "sanfrancisco_2nd.html",
@@ -25,7 +26,7 @@ const html_arr = [
 function btn_selector() {
   if (current_arr_index === 0) {
     prev_button.classList.add("not_exist");
-  } else if (current_arr_index === 9) {
+  } else if (current_arr_index === 10) {
     next_button.classList.add("not_exist");
   }
 }
@@ -44,7 +45,7 @@ function handleCurrentArrAdress() {
 //다음글 버튼 클릭 이벤트
 if (next_button) {
   next_button.addEventListener("click", (event) => {
-    if (current_arr_index < 9) {
+    if (current_arr_index < 10) {
       window.location.href = `https://dooravel.cf/${
         html_arr[current_arr_index + 1]
       }`;
