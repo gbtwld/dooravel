@@ -1,6 +1,9 @@
 const prev_button = document.querySelector(".prev_post");
 const next_button = document.querySelector(".next_post");
 const currentPath = path_Identifier();
+
+const SITE_ADDRESS = "http://www.dooravel.tk";
+
 let current_arr_index = 0;
 
 //페이지들 주소 배열
@@ -46,7 +49,7 @@ function handleCurrentArrAdress() {
 if (next_button) {
   next_button.addEventListener("click", (event) => {
     if (current_arr_index < 10) {
-      window.location.href = `https://dooravel.cf/${
+      window.location.href = `${SITE_ADDRESS}/${
         html_arr[current_arr_index + 1]
       }`;
     } else {
@@ -59,7 +62,7 @@ if (next_button) {
 if (prev_button) {
   prev_button.addEventListener("click", (event) => {
     if (current_arr_index > 0) {
-      window.location.href = `https://dooravel.cf/${
+      window.location.href = `${SITE_ADDRESS}/${
         html_arr[current_arr_index - 1]
       }`;
     } else {
