@@ -1,3 +1,1 @@
-# WebStudy
-
-https://dooravel.cf
+# Dooravel
